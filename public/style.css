@@ -1,0 +1,134 @@
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: icons;
+    src: url(../fonts/MaterialIcons-Regular.ttf);
+}
+
+body {
+    font-family: Roboto;
+    margin: 0;
+    padding: 0;
+}
+
+div#title {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+div#title img {
+    height: 1em;
+    vertical-align: middle;
+}
+
+button {
+    width: 50%;
+    min-width: auto;
+    overflow: hidden;
+    margin: auto;
+    font-family: Roboto, sans-serif;
+    font-size: large;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    transition: ease-in-out .2s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+button>img,
+button>span {
+    vertical-align: middle;
+}
+
+button:hover,
+button:focus {
+    background: #afafaf;
+}
+
+button:active {
+    background: #919191;
+    transform: scale(0.98);
+}
+
+button#saveBtn {
+    background: #ff841f;
+}
+
+button#saveBtn:hover,
+button#saveBtn:focus {
+    background: #be6216;
+}
+
+button#saveBtn:active {
+    background: #914b12;
+}
+
+button#saveBtn img {
+    height: 1em;
+}
+
+div#container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+input {
+    width: 50%;
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid #ff841f;
+    border-radius: 5px;
+    font-size: large;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: ease-in-out .1s;
+}
+
+.inputOk {
+    border: 2px solid #09ff00;
+}
+
+.inputBad {
+    border: 2px solid #ff1f1f;
+}
+
+div#conatiner>div.mdc-text-field,
+button.sendButton, select {
+    margin: 10px;
+}
+
+div#successPopup {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    margin: 20px 0px;
+}
+
+div#successPopup div {
+    transition: ease-in-out .1s;
+    opacity: 0;
+    background-color: #3bfc35;
+    width: 50%;
+    font-weight: bolder;
+    margin: auto;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.185);
+}
+
+.visible {
+    opacity: 100 !important;
+}

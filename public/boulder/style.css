@@ -1,0 +1,87 @@
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: icons;
+    src: url(../fonts/MaterialIcons-Regular.ttf);
+}
+
+body {
+    font-family: Roboto;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    width: 50%;
+    min-width: auto;
+    overflow: hidden;
+    margin: auto;
+    font-family: Roboto, sans-serif;
+    font-size: large;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    transition: ease-in-out .2s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+button>img,
+button>span {
+    vertical-align: middle;
+}
+
+button:hover,
+button:focus {
+    background: #afafaf;
+}
+
+button:active {
+    background: #919191;
+    transform: scale(0.98);
+}
+
+button#topBtn {
+    background: #ff841f;
+}
+
+button#topBtn:hover,
+button#topBtn:focus {
+    background: #be6216;
+}
+
+button#topBtn:active {
+    background: #914b12;
+}
+
+button#saveBtn img {
+    height: 1em;
+}
+
+div#container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+  
+select {
+    padding: 10px;
+    width: 50%;
+    border: 2px solid #ff841f;
+    border-radius: 5px;
+    font-size: large;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+div#conatiner>div.mdc-text-field,
+button.sendButton, select {
+    margin: 10px;
+}
