@@ -9,20 +9,38 @@
 </head>
 
 <body>
+    <div id='title'>
+        <img src="../images/icon.png">
+        <span>RaceCalc</span>
+    </div>
+    <div id="menu">
+        <a href="../">Home</a>
+        <a href="../boulder/" class="active">Boulder</a>
+    </div>
     <div id='container'>
+        <span>Počet pokusů:</span>
+        <div id='numOfTries'>
+        </div>
 
-        <select id='racerSelect'>
-            <option value="books">Books</option>
+        <select id='categorySelect'>
+            <option disabled selected value> -- vyberte kategorii -- </option>
+        </select>
+        <select id='nameSelect' disabled>
+            <option disabled selected value> -- vyberte jméno -- </option>
         </select>
 
-        <button id='topBtn' class="sendButton"> TOP </button>
-        <button id='zonaBtn' class="sendButton"> Zóna </button>
-        <button id='tryBtn' class="sendButton"> Pokus </button>
-        <button id='saveBtn' class="sendButton"> 
+        <button id='tryBtn' class="sendButton" disabled> Pokus </button>
+        <button id='zoneBtn' class="sendButton" disabled> Zóna </button>
+        <button id='topBtn' class="sendButton" disabled> TOP </button>
+        <button id='backBtn' class="sendButton" disabled> Vrátit kliknutí </button>
+        <button id='saveBtn' class="sendButton" disabled> 
             <img src="../fonts/save_icon.png">
             <span>Uložit</span> 
         </button>
 
+    </div>
+    <div id="successPopup">
+        <div>Success!</div>
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-1.11.1.js"></script>

@@ -11,8 +11,15 @@ app.use(express.json());
 app.get('/get_competitors', (req, res) => {
     console.log(`A request for competitors...`);
     let data = JSON.parse(fs.readFileSync('./data.json', 'utf8'));
+    let dataForSend = {};
 
-    //TODO: z objektu data poslat závodníky
+    for (const [key, value] of Object.entries(data)) {
+        dataForSend[value.category] = [];
+        value.contestants.forEach((e) => {
+            dataForSend[value.category].push(e.name);
+        });
+    }
+    console.log(dataForSend);
 
     res.json(data);
 });
@@ -26,14 +33,14 @@ app.post('/add_competitor', (req, res) => {
     for (const [key, value] of Object.entries(data)) {
         if (data[key].category == req.body.category) {
             categoryExists = true;
-            data[key]['contestanst'].push({ 'name': req.body.name, 'yearOfBirth': req.body.yearOfBirth });
+            data[key]['contestants'].push({ 'name': req.body.name, 'yearOfBirth': req.body.yearOfBirth });
         }
     }   
 
     //if no such category exist, it creates a new category
     if (!categoryExists) {
         console.log("Adding a new category!")
-        data[req.body.category] = { 'category': req.body.category, 'contestanst': [{ 'name': req.body.name, 'yearOfBirth': req.body.yearOfBirth }]};
+        data[req.body.category] = { 'category': req.body.category, 'contestants': [{ 'name': req.body.name, 'yearOfBirth': req.body.yearOfBirth }]};
     }
 
     //writes new data in the database

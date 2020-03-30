@@ -32,6 +32,16 @@ main data structure:
     }
 ]
 
+
+/get_competitors data structure:
+
+{
+    category: [
+        'name'
+    ]
+}
+
+
 color palette:
 #44443b	
 #e6e4e0	
